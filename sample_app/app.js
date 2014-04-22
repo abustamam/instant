@@ -1,9 +1,9 @@
-var instant = require('../lib/instant')
+var instant = require("../lib/instant");
 
-var app = instant()
+var app = instant();
 
-app.get('/', function(req, res) {
-  res.send("It's alive!")
-})
+app.get('/', function(req,res){
+	res.send("It's alive!");
+});
 
 app.listen(3000)
