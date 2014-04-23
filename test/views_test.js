@@ -2,11 +2,15 @@ var assert = require('assert'),
     App = require('../lib/app').App
     Response = require('../lib/response').Response
 
-xdescribe('Views', function() {
+describe('Views', function() {
   beforeEach(function() {
     this.app = new App()
     this.app.set('views', __dirname + '/views')
     this.app.set('view engine', 'jade')
+  })
+
+  it('has settings', function(){
+    assert.equal(this.app.settings['view engine'], 'jade');
   })
 
   it('render from app', function() {
